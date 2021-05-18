@@ -21,18 +21,19 @@ for (var keys = document.querySelectorAll("#calculator span"), operators = ["+",
     e.preventDefault()
 };
 
-/*const arr = ['cat', 'dog', 'clown', 'snake', 'begemoth', 'tiger'];
+/*==== ТЗ-15 ====*/
+
+const arr = ['cat', 'dog', 'clown', 'snake', 'begemoth', 'tiger'];
 for (let i = 0; i < arr.length; i++)
 {
     if ((i % 2) == 0)
     {
         console.log(arr[i]);
     }
-}*/
+}
 
 /*========*/
 
-/*
 const cats =
     {
         'abyssinian': '😸',
@@ -47,7 +48,7 @@ for (key in cats)
     {
         console.log(key);
     }
-}*/
+}
 
 /*========*/
 
@@ -65,7 +66,6 @@ addButton.onclick = function () {
 
 /*========*/
 
-/*
 const d = [0, 2, 5, -4, 6, 22, -9, -12, 13, 78];
 const a = [];
 const b = [];
@@ -82,4 +82,3 @@ for (let i = 0; i < d.length; i++)
 
 console.log(a);
 console.log(b);
-*/
