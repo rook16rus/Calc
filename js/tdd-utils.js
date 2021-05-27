@@ -13,11 +13,6 @@ console.log(add('', 2) === 2);
 console.log(add() === 0);
 console.log(add(true, true) === 2);
 
-const lowRate = function (item)
-{
-    item.rating.substring(0, item.rating.length) < 90
-};
-
 const array = [
     { rating: "96%", cost: 41.3, name: "Дюна" },
     { rating: "96%", cost: 32.4, name: "Звёздный путь 4" },
