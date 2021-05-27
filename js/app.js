@@ -1,4 +1,4 @@
-for (var keys = document.querySelectorAll("#calculator span"), operators = ["+", "-", "x", "÷"], decimalAdded = !1, i = 0; i < keys.length; i++) keys[i].onclick = function (e) {
+for (var keys = document.querySelectorAll("#calculator span"), operators = ["+", "-", "x", "÷"], decimalAdded = false, i = 0; i < keys.length; i++) keys[i].onclick = function (e) {
     var input = document.querySelector(".screen");
     let inputVal = input.innerHTML;
     let btnVal = this.innerHTML;
@@ -16,7 +16,14 @@ for (var keys = document.querySelectorAll("#calculator span"), operators = ["+",
         input.innerHTML = '';
     } else if (operators.indexOf(btnVal) > -1) {
         var lastChar = inputVal[inputVal.length - 1];
-        ("" != inputVal && -1 == operators.indexOf(lastChar) || "" == inputVal && "-" == btnVal) && (input.innerHTML += btnVal), operators.indexOf(lastChar) > -1 && inputVal.length > 1 && (input.innerHTML = inputVal.replace(/.$/, btnVal)), decimalAdded = !1
+        console.log(lastChar);
+        if ("" != inputVal && -1 == operators.indexOf(lastChar) || "" == inputVal && "-" == btnVal) {
+            (input.innerHTML += btnVal)
+        }
+        if (operators.indexOf(lastChar) > -1 && inputVal.length > 1) {
+            input.innerHTML = inputVal.replace(/.$/, btnVal);
+        }
+        decimalAdded = false;
     } else "." == btnVal ? decimalAdded || (input.innerHTML += btnVal, decimalAdded = !0) : input.innerHTML += btnVal;
     e.preventDefault()
 };
@@ -24,10 +31,8 @@ for (var keys = document.querySelectorAll("#calculator span"), operators = ["+",
 /*==== ТЗ-15 ====*/
 
 const arr = ['cat', 'dog', 'clown', 'snake', 'begemoth', 'tiger'];
-for (let i = 0; i < arr.length; i++)
-{
-    if ((i % 2) == 0)
-    {
+for (let i = 0; i < arr.length; i++) {
+    if ((i % 2) == 0) {
         console.log(arr[i]);
     }
 }
@@ -37,15 +42,13 @@ for (let i = 0; i < arr.length; i++)
 const cats =
     {
         'abyssinian': '😸',
-        'american-bobtail' : '🐱',
+        'american-bobtail': '🐱',
         'siam': '🙀',
-        'bombay' : '😼'
-    }
+        'bombay': '😼'
+    };
 
-for (key in cats)
-{
-    if (key.length <= 4)
-    {
+for (key in cats) {
+    if (key.length <= 4) {
         console.log(key);
     }
 }
@@ -70,10 +73,8 @@ const d = [0, 2, 5, -4, 6, 22, -9, -12, 13, 78];
 const a = [];
 const b = [];
 
-for (let i = 0; i < d.length; i++)
-{
-    if ((d[i] % 2) == 0 )
-    {
+for (let i = 0; i < d.length; i++) {
+    if ((d[i] % 2) == 0) {
         a.push(d[i]);
     } else {
         b.push(d[i]);
