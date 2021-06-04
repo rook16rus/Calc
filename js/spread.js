@@ -28,16 +28,16 @@ const stuff = [
         '🌻',
         '🌼',
         '🌽',
-    ],[
+    ], [
         [
-            { value: '🍅' },
-            { value: '🍎' },
+            {value: '🍅'},
+            {value: '🍎'},
         ], [
-            { value: '🍏' },
-            { get: () => '🍑' },
+            {value: '🍏'},
+            {get: () => '🍑'},
         ], [
-            { get: () => '🍒' },
-            { get: () => '🍓' },
+            {get: () => '🍒'},
+            {get: () => '🍓'},
         ],
     ]
 ];
@@ -53,11 +53,11 @@ const stuff = [
  * результата.
  */
 
- const zodiacSigns = stuff[0].concat(stuff[1]).concat(stuff[2][0]).concat(stuff[2][1]);
- const flowers = stuff[2][2].concat(stuff[3]);
- const food = stuff[4][0][0].value.concat(stuff[4][0][1].value).concat(stuff[4][1][0].value).concat(stuff[4][1][1].get()).concat(stuff[4][2][0].get()).concat(stuff[4][2][1].get());
+const zodiacSigns = [...stuff[0], ...stuff[1], ...stuff[2][0], ...stuff[2][1]];
+const flowers = [...stuff[2][2], ...stuff[3]];
+const food = [stuff[4][0][0].value, stuff[4][0][1].value, stuff[4][1][0].value, stuff[4][1][1].get(), stuff[4][2][0].get(), stuff[4][2][1].get()];
 
- console.log(zodiacSigns);
- console.log(flowers)
- console.log(food);
+console.log(zodiacSigns);
+console.log(flowers);
+console.log(food);
 
