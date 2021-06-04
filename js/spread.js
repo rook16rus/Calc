@@ -55,7 +55,11 @@ const stuff = [
 
 const zodiacSigns = [...stuff[0], ...stuff[1], ...stuff[2][0], ...stuff[2][1]];
 const flowers = [...stuff[2][2], ...stuff[3]];
-const food = [stuff[4][0][0].value, stuff[4][0][1].value, stuff[4][1][0].value, stuff[4][1][1].get(), stuff[4][2][0].get(), stuff[4][2][1].get()];
+const food = [stuff[4][0][0], stuff[4][0][1], stuff[4][1][0], stuff[4][1][1], stuff[4][2][0], stuff[4][2][1]].map((fruit) =>
+{
+    return fruit.value || fruit.get();
+});
+
 
 console.log(zodiacSigns);
 console.log(flowers);
